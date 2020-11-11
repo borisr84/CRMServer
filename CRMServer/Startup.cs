@@ -54,10 +54,11 @@ namespace CRMServer
 
             var serviceProvider = app.ApplicationServices;
 
+            //ToDo - Move this to other method
             using (var scope = serviceProvider.CreateScope())
             {
-                //scope.ServiceProvider.GetService<ProductContext>().Database.EnsureCreated();
-                scope.ServiceProvider.GetService<ProductContext>().Database.Migrate();
+                scope.ServiceProvider.GetService<ProductContext>().Database.EnsureCreated();
+                //scope.ServiceProvider.GetService<ProductContext>().Database.Migrate();
             }
             
         }

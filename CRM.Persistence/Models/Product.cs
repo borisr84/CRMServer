@@ -20,14 +20,13 @@ namespace CRM.Persistence.Models
         public string? Description { get; set; }
 
         //[Required]
-        [Column(TypeName = "float(8)")]
         public double Price { get; set; }
 
         //[Required]
         [Column(TypeName = "int")]
         public int Quantity { get; set; }
 
-        //[Required]
+        [Required]
         [Column(TypeName = "nvarchar(100)")]
         public string? Location { get; set; }
     }
